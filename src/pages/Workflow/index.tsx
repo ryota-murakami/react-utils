@@ -1,8 +1,8 @@
 /*
-  This example requires Tailwind CSS v2.0+ 
-  
+  This example requires Tailwind CSS v2.0+
+
   This example requires some changes to your config:
-  
+
   ```
   // tailwind.config.js
   module.exports = {
@@ -29,7 +29,7 @@ import {
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
 import React, { Fragment, useState } from 'react'
 
-import Header from '../../components/Header'
+import Header from '@/components/Header'
 
 const navigation = [
   { name: 'Dashboard', current: true, href: '#', icon: HomeIcon },
@@ -192,7 +192,7 @@ const Index: React.FC = () => {
             <div className="flex flex-1">
               <form
                 className="flex w-full md:ml-0"
-                action="pages/index#"
+                action="../index#"
                 method="GET"
               >
                 <label htmlFor="search-field" className="sr-only">

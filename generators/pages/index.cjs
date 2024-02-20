@@ -6,26 +6,26 @@ module.exports = {
   actions: () => {
     return [
       {
-        path: 'packages/react-client/pages/{{properCase name}}/index.tsx',
+        path: 'src/pages/{{properCase name}}/index.tsx',
         templateFile: 'generators/pages/index.tsx.hbs',
         type: 'add',
       },
       {
-        path: 'packages/react-client/pages/index.jsx',
+        path: 'src/pages/index.jsx',
         pattern: /(.*)(<main className={styles.main}>[\s\S]*)(<\/main>)/m,
         template:
           '$1$2  <Link to="/{{lowerCase name}}">{{properCase name}}</Link>\n$3',
         type: 'modify',
       },
       {
-        path: 'packages/react-client/Routes.tsx',
+        path: 'src/Routes.tsx',
         pattern: /(const Routes = \(\) => {)/,
         template:
           "const {{properCase name}} = lazy(async () => import('./pages/{{properCase name}}'));\n\n$1",
         type: 'modify',
       },
       {
-        path: 'packages/react-client/Routes.tsx',
+        path: 'src/Routes.tsx',
         pattern:
           /(.*)(<Route path="\*" element={<NotFound \/>} \/>\s*<\/RouteList>)/s,
         template:

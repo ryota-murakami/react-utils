@@ -1,7 +1,7 @@
 import { Component } from 'react'
 
-import { Link } from '../components/Link'
-import { Page } from '../components/Page'
+import { Link } from '@/components/Link'
+import { Page } from '@/components/Page'
 
 import styles from './index.module.css'
 

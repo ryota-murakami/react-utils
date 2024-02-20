@@ -2,10 +2,11 @@ import { Suspense, lazy } from 'react'
 import { BrowserRouter, Routes as RouteList, Route } from 'react-router-dom'
 import './global.css'
 
-import { Loading } from './components/Loading'
+import { Loading } from '@/components/Loading'
+
 import NotFound from './pages/NotFound'
 
-const Index = lazy(async () => import('./pages/index'))
+const Index = lazy(async () => import('./pages'))
 const Workflow = lazy(async () => import('./pages/Workflow'))
 
 const ReactHookForm = lazy(async () => import('./pages/ReactHookForm'))
